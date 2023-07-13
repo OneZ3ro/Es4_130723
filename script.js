@@ -2,15 +2,18 @@ const tabella = document.getElementById("tabella");
 
 const estrazione_num = (event) => {
   const ul = document.getElementById("lista-lucky-num");
-  const li_num_random = document.createElement("li");
+  const span_num_random = document.createElement("span");
+  const li = document.createElement("li");
   const random_num = Math.floor(Math.random() * numeri_tombola.length) + 1;
 
-  li_num_random.innerText = `Numero fortunato: ${random_num}`;
+  li.innerText = "Numero fortunato: ";
+  span_num_random.innerText = `${random_num}`;
 
   console.log(random_num);
   console.log(event.target);
 
-  ul.appendChild(li_num_random);
+  ul.appendChild(li);
+  li.appendChild(span_num_random);
 };
 
 const numeri_tombola = [];
