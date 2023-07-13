@@ -2,15 +2,42 @@ body {
     margin: 0;
 }
 
+header {
+    padding-block: 10px;
+    text-align: center;
+}
+
+main {
+    padding-inline: 10px;
+
+}
+
+
 .cella {
+    display: inline-block;
     padding: 10px;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+.background-cella {
+    background-color: red;
+    color: white;
+    
+}
+
+li {
+    padding-block: 10px;
 }
 
 .bottone {
     display: block;
     margin-inline: auto;
+    margin-block: 20px;
 }
 
 #tit-lucky-num {
     display: none;
-}
+} 

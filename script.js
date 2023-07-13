@@ -1,4 +1,5 @@
 const tabella = document.getElementById("tabella");
+const numeri_tombola = [];
 
 const estrazione_num = (event) => {
   const ul = document.getElementById("lista-lucky-num");
@@ -9,14 +10,18 @@ const estrazione_num = (event) => {
   li.innerText = "Numero fortunato: ";
   span_num_random.innerText = `${random_num}`;
 
+  const span_num = parseInt(span_num_random.innerText);
+  const div_num_uscito = document.getElementById(`cella${span_num}`);
+
+  div_num_uscito.classList.add("background-cella");
+
+  console.log(div_num_uscito);
   console.log(random_num);
   console.log(event.target);
 
   ul.appendChild(li);
   li.appendChild(span_num_random);
 };
-
-const numeri_tombola = [];
 
 const add_celle_btn_numeriTombola = () => {
   const bottone = document.createElement("button");
@@ -26,8 +31,8 @@ const add_celle_btn_numeriTombola = () => {
     numeri_tombola[i] = i + 1;
 
     cella.innerText = numeri_tombola[i];
-    cella.style.display = "inline-block";
     cella.className = "cella";
+    cella.id = `cella${numeri_tombola[i]}`;
     tabella.appendChild(cella);
   }
 
@@ -36,3 +41,7 @@ const add_celle_btn_numeriTombola = () => {
   tabella.appendChild(bottone);
 };
 add_celle_btn_numeriTombola();
+
+const prova = (event) => {
+  console.log(event);
+};
