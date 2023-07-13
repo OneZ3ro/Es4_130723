@@ -5,3 +5,12 @@ body {
 .cella {
     padding: 10px;
 }
+
+.bottone {
+    display: block;
+    margin-inline: auto;
+}
+
+#tit-lucky-num {
+    display: none;
+}
