@@ -1,7 +1,7 @@
 const tabella = document.getElementById("tabella");
 const numeri_tombola = [];
 
-const estrazione_num = (event) => {
+const estrazione_num = () => {
   const ul = document.getElementById("lista-lucky-num");
   const span_num_random = document.createElement("span");
   const li = document.createElement("li");
@@ -17,7 +17,6 @@ const estrazione_num = (event) => {
 
   console.log(div_num_uscito);
   console.log(random_num);
-  console.log(event.target);
 
   ul.appendChild(li);
   li.appendChild(span_num_random);
